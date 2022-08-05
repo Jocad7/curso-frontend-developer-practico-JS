@@ -5,10 +5,10 @@ const cardsContainer = document.querySelector('.cards-container');
 menuEmail.addEventListener('click', toggleMenu);
 
 function toggleMenu(){
-    const isShoppingCartClosed = productDetail.classList.contains('inactive');
+    const isShoppingCartClosed = shoppingCartContainer.classList.contains('inactive');
     const isMobilMenuClosed = mobilMenu.classList.contains('inactive');
     if(!isShoppingCartClosed){
-        productDetail.classList.add('inactive');
+        shoppingCartContainer.classList.add('inactive');
     }
     
 
@@ -21,16 +21,16 @@ const mobilMenu = document.querySelector('.mobile-menu');
 burguer.addEventListener('click', toggleBurguer);
 
 function toggleBurguer(){
-    const isShoppingCartClosed = productDetail.classList.contains('inactive');
+    const isShoppingCartClosed = shoppingCartContainer.classList.contains('inactive');
     if(!isShoppingCartClosed){
-        productDetail.classList.add('inactive');
+        shoppingCartContainer.classList.add('inactive');
     }
     desktopMenu.classList.add('inactive');
     mobilMenu.classList.toggle('inactive')
 }
 
 const shoppingCart = document.querySelector('.navbar-shopping-cart')
-const productDetail = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 
 shoppingCart.addEventListener('click', toggleCart);
 
@@ -45,7 +45,7 @@ function toggleCart(){
         desktopMenu.classList.add('inactive');
     }
 
-     productDetail.classList.toggle('inactive')
+     shoppingCartContainer.classList.toggle('inactive')
 }
 
 const productList = [];
